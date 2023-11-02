@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_management/features/SecondScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,11 +32,12 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(title: const Text("Home Page")),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Hello World"),
+            const Text("0"),
             ElevatedButton(
                 onPressed: () {
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondScreen()));
                 },
                 child: const Text("Goto Second Screen"))
           ],
